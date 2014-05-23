@@ -27,11 +27,11 @@ ria-next
 #####支持的Tags
 input, button, anchor
 #####功能介绍
-1. button有几种主要颜色，primary，success...；
-2. 一个button有不同的尺寸， mini, tiny, medium, large, huge, monster；
+1. button有几种主要颜色，primary，success，link，...；
+2. button有不同的尺寸， mini, tiny, medium, large, huge, monster；
 3. Hover动画？
 4. button可以有一个icon；
 5. button可以以block形式显示，填充父元素；
 5. button的状态：nomral, hover, down, active;
 6. button可以是圆形或者圆角；
-7. 
+
