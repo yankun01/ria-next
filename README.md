@@ -43,15 +43,15 @@ ria-next
 ####HTML
 
 #####`large`尺寸的`button`，颜色为`primary`，内部有一个`icon`
-<button class="ui-button primary large">
-  <i class="icon icon-plus"></i>
-  Create
-</button>
+    <button class="ui-button primary large">
+      <i class="icon icon-plus"></i>
+      Create
+    </button>
 
 #####圆形`button`
-<button class="ui-button primary large round">
-  <i class="icon icon-plus"></i>
-</button>
+    <button class="ui-button primary large round">
+      <i class="icon icon-plus"></i>
+    </button>
 
 
 ###Button Group
@@ -69,27 +69,27 @@ ria-next
 ####HTML
 
 #####普通group
-<div class="ui-button-group">
-  <button class="ui-button primary">
-  </button>
-  <button class="ui-button secondary">
-  </button>
-</div>
+    <div class="ui-button-group">
+      <button class="ui-button primary">
+      </button>
+      <button class="ui-button secondary">
+      </button>
+    </div>
 
 #####像checkbox一样的group，选中一个后button变成active状态。
-<div class="ui-button-group checkbox">
-  <button class="ui-button primary">
-  </button>
-  <button class="ui-button secondary">
-  </button>
-</div>
+    <div class="ui-button-group checkbox">
+      <button class="ui-button primary">
+      </button>
+      <button class="ui-button secondary">
+      </button>
+    </div>
 
 #####像radio一样的group，选中button变成active状态。
-<div class="ui-button-group radio">
-  <button class="ui-button primary">
-  </button>
-  <button class="ui-button secondary">
-  </button>
-</div>
+    <div class="ui-button-group radio">
+      <button class="ui-button primary">
+      </button>
+      <button class="ui-button secondary">
+      </button>
+    </div>
 
 
