@@ -21,6 +21,11 @@ ria-next
 3. 对控件添加Unit Test来进一步保证质量。
 4. 尝试剥离控件对icon的依赖。尝试引入web font。
 
+###关于AMD
+可以使用AMD也可以不使用。
+[UMD](https://github.com/umdjs/umd/blob/master/amdWeb.js)
+
+
 ###控件和交互行为设计
 
 ####Button
@@ -77,19 +82,37 @@ ria-next
     </div>
 
 #####像checkbox一样的group，选中一个后button变成active状态。
-    <div class="ui-button-group checkbox">
-      <button class="ui-button primary">
+    <div class="ui-button-group">
+      <button class="ui-button primary checkbox">
       </button>
-      <button class="ui-button secondary">
+      <button class="ui-button secondary checkbox">
       </button>
     </div>
 
 #####像radio一样的group，选中button变成active状态。
-    <div class="ui-button-group radio">
-      <button class="ui-button primary">
+    <div class="ui-button-group">
+      <button class="ui-button primary radio">
       </button>
-      <button class="ui-button secondary">
+      <button class="ui-button secondary radio">
       </button>
     </div>
+
+###Button Bar
+####支持的tag
+`div`
+
+####简介
+把`button group`组合起来。
+
+####功能介绍
+1. button group横向排列；
+
+####HTML
+    <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group">...</div>
+      <div class="btn-group">...</div>
+      <div class="btn-group">...</div>
+    </div>
+
 
 
