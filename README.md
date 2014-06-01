@@ -28,7 +28,7 @@ ria-next
 
 ###控件和交互行为设计
 
-####Button
+####Button（CSS）
 
 #####支持的Tags
 `input`, `button`, `anchor`
@@ -59,21 +59,21 @@ ria-next
     </button>
 
 
-###Button Group
+####Button Group（CSS）
 
-####支持的tag
+#####支持的tag
 `div`
 
-####简介
+#####简介
 把`button`控件分组起来。
 
-####功能介绍
+#####功能介绍
 1. button group把button组合成一行。
 2. button group可以为组内button提供类似checkbox或者radio行为。可以选中一个或者多个。
 
-####HTML
+#####HTML
 
-#####普通group
+######普通group
     <div class="ui-button-group">
       <button class="ui-button primary">
       </button>
@@ -81,7 +81,7 @@ ria-next
       </button>
     </div>
 
-#####像checkbox一样的group，选中一个后button变成active状态。
+######像checkbox一样的group，选中一个后button变成active状态。
     <div class="ui-button-group">
       <button class="ui-button primary checkbox">
       </button>
@@ -89,7 +89,7 @@ ria-next
       </button>
     </div>
 
-#####像radio一样的group，选中button变成active状态。
+######像radio一样的group，选中button变成active状态。
     <div class="ui-button-group">
       <button class="ui-button primary radio">
       </button>
@@ -97,22 +97,100 @@ ria-next
       </button>
     </div>
 
-###Button Bar
-####支持的tag
+####Button Bar（CSS）
+#####支持的tag
 `div`
 
-####简介
+#####简介
 把`button group`组合起来。
 
-####功能介绍
+#####功能介绍
 1. button group横向排列；
 
-####HTML
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group">...</div>
-      <div class="btn-group">...</div>
-      <div class="btn-group">...</div>
+#####HTML
+    <div class="ui-button-toolbar" role="toolbar">
+      <div class="ui-button-group">...</div>
+      <div class="ui-button-group">...</div>
+      <div class="ui-button-group">...</div>
+    </div>
+    
+    
+
+####Inputbox（CSS）
+
+#####简介
+输入框
+
+#####功能介绍
+1. 可以支持多个尺寸。
+
+#####HTML
+    <input class="ui-text mini" />
+
+####Inputbox Group（CSS）
+#####简介
+`Input Group`
+
+#####功能介绍
+1. 可以在`Input Box`前后添加button，icon，或者文字
+
+#####HTML
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="text" class="form-control">
+      <span class="input-group-addon">.00</span>
     </div>
 
 
+####Select（JS）
+#####支持的tag
+`select`
+#####简介
+下拉框
 
+#####功能介绍
+1. 把select变成一个DOM组成的下拉列表。
+2. 下拉列表中可以支持过滤功能。
+3. 下拉中空值value，作为默认选项。
+
+#####HTML
+    <select>
+        <option value="">请选择</option>
+        <option value="1">选项1</option>
+    </select>
+
+####Auto Complete
+#####支持的tag
+`input`, `textarea`
+#####简介
+自动搜索或者过滤列表，帮助用户完成输入。
+#####功能介绍
+1. 支持静态列表。
+2. 支持ajax请求远程列表。
+3. 列表要支持html 模版。
+
+
+####多选列表
+#####支持的tag
+`select` multiple type
+#####简介
+下拉列表，输入过滤列表，可以选择多个值。
+#####功能介绍
+#####HTML
+
+####日期控件
+#####支持的tag
+`input`
+#####简介
+选择日期
+#####功能介绍
+1. 可以指定日期格式。
+2. 可以指定关联的日期控件。验证开始和结束。
+3. 可以指定关联的时间控件。
+#####HTML
+
+####控件名称
+#####支持的tag
+#####简介
+#####功能介绍
+#####HTML
