@@ -354,3 +354,9 @@ ria-next
 3. 支持paper style。
 
 #####HTML
+
+####Crousel
+#####支持的tag
+#####简介
+#####功能介绍
+#####HTML
