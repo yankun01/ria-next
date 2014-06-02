@@ -45,15 +45,15 @@ ria-next
 5. button的状态：nomral, hover, down, active;
 6. button可以是圆形或者圆角；
 
-####HTML
+#####HTML
 
-#####`large`尺寸的`button`，颜色为`primary`，内部有一个`icon`
+######`large`尺寸的`button`，颜色为`primary`，内部有一个`icon`
     <button class="ui-button primary large">
       <i class="icon icon-plus"></i>
       Create
     </button>
 
-#####圆形`button`
+######圆形`button`
     <button class="ui-button primary large round">
       <i class="icon icon-plus"></i>
     </button>
@@ -319,7 +319,7 @@ ria-next
 #####支持的tag
 `input`
 #####简介
-对输入进行限制。[MaskedInpu](http://demos.telerik.com/aspnet-mvc/maskedtextbox/index)
+对输入进行限制。[MaskedInput](http://demos.telerik.com/aspnet-mvc/maskedtextbox/index)
 #####功能介绍
 #####HTML
 
@@ -327,7 +327,7 @@ ria-next
 #####支持的tag
 `input`
 #####简介
-对数字输入提供支持。[NumericInpu](http://demos.telerik.com/aspnet-mvc/numerictextbox/index)
+对数字输入提供支持。[NumericInput](http://demos.telerik.com/aspnet-mvc/numerictextbox/index)
 #####功能介绍
 #####HTML
 
