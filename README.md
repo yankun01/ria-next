@@ -186,8 +186,151 @@ ria-next
 #####功能介绍
 1. 可以指定日期格式。
 2. 可以指定关联的日期控件。验证开始和结束。
-3. 可以指定关联的时间控件。
+3. 可以指定关联的时间控件
+
 #####HTML
+
+
+####提示气泡（ESUI的toaster）
+#####支持的tag
+#####简介
+提示信息。
+#####功能介绍
+1. 分为info,error,warning,success,default
+2. 可以设置提示自动关闭时间。
+
+#####HTML
+
+
+####Dialog
+#####支持的tag
+#####简介
+现实页面信息框
+#####功能介绍
+1. 提示图标Error，Question，Infomation，Warning
+2. Buttons设置，OKCancel，YesNo
+#####HTML
+
+####Checkbox&Radio
+#####支持的tag
+`Checkbox`
+#####简介
+为用户提供多选
+#####功能介绍
+1. 横向排列。
+2. 纵向排列。
+3. 自定义皮肤。
+4. 支持toggle样式的皮肤。(Checkbox)
+
+#####HTML
+
+
+####Breadcrumbs
+#####支持的tag
+#####简介
+导航面包屑
+#####功能介绍
+1. 横向复杂面包屑。
+2. 简单面包屑。
+
+#####HTML
+
+####Grid&List Table
+#####支持的tag
+#####简介
+数据表格
+#####功能介绍
+重点
+
+#####HTML
+
+
+####Tooltip
+#####支持的tag
+#####简介
+标准Tooltip的替代品。
+#####功能介绍
+1. 位置；
+2. 动画；
+
+#####HTML
+
+####Dual-List
+#####支持的tag
+`select` multiple type
+#####简介
+双向选择列表。
+#####功能介绍
+1. 支持group。
+2. 支持列表过滤。
+3. 支持全选，删除全部。
+
+#####HTML
+
+####Dual－Tree-List
+#####支持的tag
+`Input`
+#####简介
+双向树状选择列表。
+#####功能介绍
+1. 左侧树状选择。
+2. 支持树查找，过滤。
+3. 支持全选，删除全部。
+
+#####HTML
+
+
+####MultipleSelect
+#####支持的tag
+`Select` multiple type
+#####简介
+多选列表。[类似Telerik](http://demos.telerik.com/aspnet-mvc/multiselect/index)
+#####功能介绍
+
+#####HTML
+
+
+####Progress Bar
+#####支持的tag
+`div`
+#####简介
+进度条
+#####功能介绍
+1. 动画。
+
+#####HTML
+
+####Uploader
+#####支持的tag
+`div`
+#####简介
+上传,[上传文件]（http://blueimp.github.io/jQuery-File-Upload/）
+#####功能介绍
+1. 上传单个。
+2. 上传多个。
+3. 进度条显示。
+4. 预览。
+5. 文件类型检测。
+
+#####HTML
+
+
+####Input Mask
+#####支持的tag
+`input`
+#####简介
+对输入进行限制。[MaskedInpu](http://demos.telerik.com/aspnet-mvc/maskedtextbox/index)
+#####功能介绍
+#####HTML
+
+####Numeric Input
+#####支持的tag
+`input`
+#####简介
+对数字输入提供支持。[NumericInpu](http://demos.telerik.com/aspnet-mvc/numerictextbox/index)
+#####功能介绍
+#####HTML
+
 
 ####控件名称
 #####支持的tag
