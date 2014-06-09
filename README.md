@@ -8,22 +8,36 @@ ria-next
 ##ESUI
 
 ###概述
-[ESUI](https://github.com/ecomfe/esui)中的控件已经实现独立运行，我们可以继续增强功能并增加新控件。提供给不同的业务系统进行使用。
+在[ESUI](https://github.com/ecomfe/esui)现有组件的基础上：
+1. 加入CSS框架，为基础HTML控件和HTML组合控件提供样式支持，并提供CSS Grid。
+2. 对现有ESUI控件进行进一步设计，优化和整理。
+3. 添加通用的组件。
+
 
 ###目标
-提供一套功能稳定的标准控件和交互行为。
-与UX约定设计控件范围，减少UX设计的自由度，最大程度的进行复用，节省开发时间。
-实现UE自行配置标准控件颜色。
+1. 提供一套功能设计优良，功能稳定的标准控件和交互行为。
+2. 提供一个Sytle Guide页面列出所有的设计组件。
+3. UE可能自行定义标准样式给FE使用。
 
 ###加强点
-1. 搜集其他项目中成功的控件并加入esui中。
-2. 对esui中的控件进行功能加强，提供option来控制这些功能。
-3. 对控件添加Unit Test来进一步保证质量。
-4. 尝试剥离控件对icon的依赖。尝试引入web font。
+1. 加入CSS基础框架。
+2. 加入CSS grid。
+3. 尝试剥离控件对icon的依赖，可以使用image icon或者web font。
+4. 搜集业务需求，在现有ESUI基础上，对其功能进行一点功能。通过option来提供。
+5. 添加一些通用的组件进来。
+6. 对控件添加Unit Test来进一步保证质量。
 
 ###关于AMD
 可以使用AMD也可以不使用。
 [UMD](https://github.com/umdjs/umd/blob/master/amdWeb.js)
+
+###组件分类
+组件可以分为以下几种类型：
+1.HTML基础控件。
+2.HTML组合控件。
+3.可复用CSS View。
+4.JS支持组件。
+
 
 
 ###控件和交互行为设计
