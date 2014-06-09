@@ -40,13 +40,13 @@ ria-next
 5. JS行为扩展。
 
 ####HTML基础控件
-HTML基础控件是基本页面元素。例如Button，Input。也可以组成一组元素。例如：Buttons Group。
+HTML基础控件是基本页面元素, 代表一个独立的功能。例如Button，Input, Progress Bar。也可以组成一组元素。例如：Buttons Group。
 
 ####HTML组合控件
-由一组HTML Tag组成的一个页面元素。例如：Inputs Group。
+由一组HTML Tag组成的一个页面元素。例如：Inputs Group，Tool Bar，Form， Menu， Nav bar, Breadcrumbs。
 
 ####可复用CSS View
-可以复用的一组HTML tag。由HTML基础控件和HTML组合控件组成。例如：List，关键词过滤列表等。
+UI设计上更高一级的可以复用的一组HTML组合。由HTML基础控件和HTML组合控件组成。例如：List，关键词过滤列表等。
 
 ####JS组件
 JS扩展的组件。例如现有的Calendar，Select等组件。
@@ -57,8 +57,15 @@ JS的扩展行为。比如：Drag&Drop，Transition，Position。
 
 ###控件和行为设计
 
-####设计说明
-
+####控件说明模板
+| 控件定义名称 | 说明                                                                                |
+|--------|-----------------------------------------------------------------------------------|
+| 控件实现   | 每种控件可以有多个实例，分别表示不同的控件实现。例如：Button可以有带图标Button。Label可以有Ribbon Label，Corner Label等。 |
+| 控件皮肤   | 每个控件实现可以包含多个皮肤，可以修改控件实现的外观。例如：普通Button可以红色，绿色，大的，小的几种皮肤。                          |
+| 控件状态   | 该控件拥有的状态。例如：disabled，active，hovered，pressed down...                               |
+| 控件行为   | 控件行为的说明。                                                                          |
+| 控件属性   | 控件支持的属性。                                                                          |
+| 实例     | HTML或者JS实例。说明如何使用。                                                                |
 
 
 
