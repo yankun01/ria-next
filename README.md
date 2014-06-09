@@ -8,7 +8,7 @@ ria-next
 ##ESUI
 
 ###概述
-在[ESUI](https://github.com/ecomfe/esui)现有组件的基础上：
+在[ESUI](https://github.com/ecomfe/esui)现有控件的基础上：
 1. 加入CSS框架，为基础HTML控件和HTML组合控件提供样式支持，并提供CSS Grid。
 2. 对现有ESUI控件进行进一步设计，优化和整理。
 3. 添加通用的组件。
@@ -33,14 +33,34 @@ ria-next
 
 ###组件分类
 组件可以分为以下几种类型：
-1.HTML基础控件。
-2.HTML组合控件。
-3.可复用CSS View。
-4.JS支持组件。
+1. HTML基础控件。
+2. HTML组合控件。
+3. 可复用CSS View。
+4. JS组件。
+5. JS行为扩展。
+
+####HTML基础控件
+HTML基础控件是基本页面元素。例如Button，Input。也可以组成一组元素。例如：Buttons Group。
+
+####HTML组合控件
+由一组HTML Tag组成的一个页面元素。例如：Inputs Group。
+
+####可复用CSS View
+可以复用的一组HTML tag。由HTML基础控件和HTML组合控件组成。例如：List，关键词过滤列表等。
+
+####JS组件
+JS扩展的组件。例如现有的Calendar，Select等组件。
+
+####JS行为扩展
+JS的扩展行为。比如：Drag&Drop，Transition，Position。
+
+
+###控件和行为设计
+
+####设计说明
 
 
 
-###控件和交互行为设计
 
 ####Button（CSS）
 
