@@ -26,6 +26,7 @@ ria-next
 4. 搜集业务需求，在现有ESUI基础上，对其功能进行一点功能。通过option来提供。
 5. 添加一些通用的组件进来。
 6. 对控件添加Unit Test来进一步保证质量。
+7. 动画[CSS Animation](http://daneden.github.io/animate.css/)
 
 ###关于AMD
 可以使用AMD也可以不使用。
