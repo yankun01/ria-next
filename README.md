@@ -9,9 +9,10 @@ ria-next
 
 ###概述
 在[ESUI](https://github.com/ecomfe/esui)现有控件的基础上：
+
 1. 加入CSS框架，为基础HTML控件和HTML组合控件提供样式支持，并提供CSS Grid。
 2. 对现有ESUI控件进行进一步设计，优化和整理。
-3. 添加通用的组件。
+3. 添加更多通用的组件。
 
 
 ###目标
@@ -25,7 +26,7 @@ ria-next
 3. 尝试剥离控件对icon的依赖，可以使用image icon或者web font。
 4. 搜集业务需求，在现有ESUI基础上，对其功能进行一点功能。通过option来提供。
 5. 添加一些通用的组件进来。
-6. 对控件添加Unit Test来进一步保证质量。
+6. 优化现有控件，添加Unit Test来进一步保证质量。
 7. 动画[CSS Animation](http://daneden.github.io/animate.css/)。可以实现类似于[groundwork](http://groundworkcss.github.io/)的效果。
 
 ###关于AMD
