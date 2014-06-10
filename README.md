@@ -26,7 +26,7 @@ ria-next
 4. 搜集业务需求，在现有ESUI基础上，对其功能进行一点功能。通过option来提供。
 5. 添加一些通用的组件进来。
 6. 对控件添加Unit Test来进一步保证质量。
-7. 动画[CSS Animation](http://daneden.github.io/animate.css/)
+7. 动画[CSS Animation](http://daneden.github.io/animate.css/)。可以实现类似于[groundwork](http://groundworkcss.github.io/)的效果。
 
 ###关于AMD
 可以使用AMD也可以不使用。
@@ -35,15 +35,15 @@ ria-next
 ###组件分类
 组件可以分为以下几种类型：
 
-1. HTML基础控件。
-2. HTML组合控件。
-3. 可复用CSS View。
-4. JS组件。
-5. JS行为扩展。
+1. HTML基础控件。（CSS目录下）
+2. HTML组合控件。（Components目录下）
+3. 可复用CSS View。（View目录下）
+4. JS组件。（JS目录下）
+5. JS行为扩展。（Behavior目录下）
 
 
 ####HTML基础控件
-HTML基础控件是基本页面元素, 代表一个独立的功能。例如Button，Input, Progress Bar。也可以组成一组元素。例如：Buttons Group。
+HTML基础控件是基本页面元素, 代表一个独立的功能。例如Button，Input, Progress Bar。
 
 ####HTML组合控件
 由一组HTML Tag组成的一个页面元素。例如：Inputs Group，Tool Bar，Form， Menu， Nav bar, Breadcrumbs。
@@ -55,7 +55,7 @@ UI设计上更高一级的可以复用的一组HTML组合。由HTML基础控件�
 JS扩展的组件。例如现有的Calendar，Select等组件。
 
 ####JS行为扩展
-JS的扩展行为。比如：Drag&Drop，Transition，Position。
+JS的扩展行为。比如：Drag&Drop，Transition，Position等。
 
 ####控件和行为设计模板说明
 | 控件定义名称 | 说明                                                                                |
