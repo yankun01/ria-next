@@ -39,7 +39,8 @@ ria-next
 1. HTML基础控件。（CSS目录下）
 2. HTML组合控件。（Components目录下）
 3. 可复用CSS View。（View目录下）
-4. JS组件。（JS目录下）
+4. JS控件。（JS目录下）
+5. 业务JS控件。（Biz目录下）
 5. JS行为扩展。（Behavior目录下）
 
 
