@@ -1,13 +1,18 @@
+#Checkbox
 
-####Checkbox&Radio
-#####Ö§³ÖµÄtag
-`Checkbox`
-#####¼ò½é
-ÎªÓÃ»§Ìá¹©¶àÑ¡
-#####¹¦ÄÜ½éÉÜ
-1. ºáÏòÅÅÁÐ¡£
-2. ×ÝÏòÅÅÁÐ¡£
-3. ×Ô¶¨ÒåÆ¤·ô¡£
-4. Ö§³ÖtoggleÑùÊ½µÄÆ¤·ô¡£(Checkbox)
 
-#####HTML
+##æŽ§ä»¶å®žçŽ°
+###è‡ªå®šä¹‰Checkboxæ ·å¼
+###Switchæ ·å¼çš„Checkbox
+
+
+##æŽ§ä»¶çš®è‚¤
+###Checkboxæ”¯æŒå°ºå¯¸
+
+
+##æŽ§ä»¶çŠ¶æ€
+###Normal
+###Hover
+###Down
+###Active
+###Disabled
