@@ -1,11 +1,11 @@
 
 ####Panel
-#####Ö§³ÖµÄtag
-#####¼ò½é
-±ê×¼µÄpanel
-#####¹¦ÄÜ½éÉÜ
-1. Ö§³Öpanel header¡£
-2. Ö§³Östack style¡£
-3. Ö§³Öpaper style¡£
+#####æ”¯æŒçš„tag
+#####ç®€ä»‹
+æ ‡å‡†çš„panel
+#####åŠŸèƒ½ä»‹ç»
+1. æ”¯æŒpanel headerã€‚
+2. æ”¯æŒstack styleã€‚
+3. æ”¯æŒpaper styleã€‚
 
 #####HTML
