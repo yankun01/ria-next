@@ -1,24 +1,18 @@
-####Inputbox（CSS）
+#Inputbox（CSS）
 
-#####简介
-输入框
 
-#####功能介绍
-1. 可以支持多个尺寸。
+##控件实现
+###表示一个Inputbox
 
-#####HTML
-    <input class="ui-text mini" />
+##控件皮肤
+###Inputbox前后可以添加Button
+###Inputbox前后可以添加Icon
+###Inputbox前后可以添加Select
+###Inputbox可以以Block形式显示。填充父元素。
+###Inputbox可以有不同的宽度
+###Inputbox可以有不同的高度尺寸
 
-####Inputbox Group（CSS）
-#####简介
-`Input Group`
-
-#####功能介绍
-1. 可以在`Input Box`前后添加button，icon，或者文字
-
-#####HTML
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <input type="text" class="form-control">
-      <span class="input-group-addon">.00</span>
-    </div>
+##控件状态
+###Normal
+###Focus
+###Disabled

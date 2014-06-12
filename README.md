@@ -17,7 +17,7 @@ ria-next
 
 ###目标
 1. 提供一套功能设计优良，功能稳定的标准控件和交互行为。
-2. 提供一个Sytle Guide页面列出所有的设计组件。
+2. 提供一个Style Guide页面列出所有的设计组件。
 3. UE可能自行定义标准样式给FE使用。
 
 ###加强点
@@ -39,7 +39,8 @@ ria-next
 1. HTML基础控件。（CSS目录下）
 2. HTML组合控件。（Components目录下）
 3. 可复用CSS View。（View目录下）
-4. JS组件。（JS目录下）
+4. JS控件。（JS目录下）
+5. 业务JS控件。（Biz目录下）
 5. JS行为扩展。（Behavior目录下）
 
 
