@@ -1,17 +1,16 @@
-####Button Bar（CSS）
-#####支持的tag
-`div`
+#Pager
 
-#####简介
-把`button group`组合起来。
 
-#####功能介绍
-1. button group横向排列；
+##控件实现
+现有Pager样式
 
-#####HTML
-    <div class="ui-button-toolbar" role="toolbar">
-      <div class="ui-button-group">...</div>
-      <div class="ui-button-group">...</div>
-      <div class="ui-button-group">...</div>
-    </div>
-    
+##控件皮肤
+###Flat样式
+###Link样式
+
+##控件状态
+###Normal
+###Hover
+###Down
+###Active
+###Disabled

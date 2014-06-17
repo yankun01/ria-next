@@ -1,17 +1,5 @@
-####Button Bar（CSS）
-#####支持的tag
-`div`
+#Checkbox Group
 
-#####简介
-把`button group`组合起来。
+##控件实现
+一个缩进的Checkbox Group
 
-#####功能介绍
-1. button group横向排列；
-
-#####HTML
-    <div class="ui-button-toolbar" role="toolbar">
-      <div class="ui-button-group">...</div>
-      <div class="ui-button-group">...</div>
-      <div class="ui-button-group">...</div>
-    </div>
-    
