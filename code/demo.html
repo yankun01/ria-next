@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Button - ESUI Demo</title>
+        <link rel="stylesheet" href="src/css/main.css" />
+        <link rel="stylesheet" href="demo.css" />
+    </head>
+    <body>
+        <h1>Demo</h1>
+        <div id="layout" class="ui-g">
+            <div class="ui-u-1-5">
+                <ul id="navigator">
+                    <li><a href="Grid.html">ESUI</a></li>
+                    <li><a href="Label.html">Get Started</a></li>
+                    <li><a href="Link.html">Layouts</a></li>
+                    <li><a href="Button.html">Base</a></li>
+                    <li><a href="Button.html">UI Elements</a></li>
+                    <li><a href="#grids">Grids</a></li>
+                </ul>
+            </div>
+            <div class="ui-u-4-5">
+            <div id="main" class="content p2 no-pt">
+                <h2 id="grids" class="content-subhead">Grid</h2>
+                <p>
+                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
+                </p>
+
+                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h2 class="content-subhead">Try Resizing your Browser</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            </div>
+        </div>
+        <script src="loader/esl.js"></script>
+        <script>
+            require.config({
+                'baseUrl': '../src',
+                'paths': {},
+                'packages': [
+                    {
+                        'name': 'mini-event',
+                        'location': '../dep/mini-event/1.0.0/src',
+                        'main': 'main'
+                    },
+                    {
+                        'name': 'underscore',
+                        'location': '../dep/underscore/1.5.2/src',
+                        'main': 'underscore'
+                    },
+                    {
+                        'name': 'moment',
+                        'location': '../dep/moment/2.0.1/src',
+                        'main': 'moment'
+                    },
+                    {
+                        'name': 'etpl',
+                        'location': '../dep/etpl/2.1.0/src',
+                        'main': 'main'
+                    },
+                    {
+                        'name': 'esui',
+                        'location': '../src',
+                        'main': 'main'
+                    }
+                ]
+            });
+        </script>
+        <script src="jquery-1.9.1.min.js"></script>
+        <script>
+        require(
+            [
+                'esui',
+                'esui/Button'
+            ],
+            function (ui) {
+                var controls = ui.init();
+                var defaultBtn = controls[0];
+                var actBtn = controls[4];
+                var labelText = controls[5];
+
+
+                actBtn.onclick = function () {
+                    defaultBtn.setContent('新文字');
+                };
+            }
+        );
+        (function (window, document) {
+
+            var layout   = document.getElementById('layout'),
+                menu     = document.getElementById('menu'),
+                menuLink = document.getElementById('menuLink');
+
+            function toggleClass(element, className) {
+                var classes = element.className.split(/\s+/),
+                    length = classes.length,
+                    i = 0;
+
+                for(; i < length; i++) {
+                  if (classes[i] === className) {
+                    classes.splice(i, 1);
+                    break;
+                  }
+                }
+                // The className is not found
+                if (length === classes.length) {
+                    classes.push(className);
+                }
+
+                element.className = classes.join(' ');
+            }
+
+            menuLink.onclick = function (e) {
+                var active = 'active';
+
+                e.preventDefault();
+                toggleClass(layout, active);
+                toggleClass(menu, active);
+                toggleClass(menuLink, active);
+            };
+
+        }(this, this.document));
+        </script>
+    </body>
+</html>
