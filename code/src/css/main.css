@@ -1199,10 +1199,14 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
   text-decoration: none;
   border-radius: 2px;
 }
+.ui-button.fluid {
+  display: block;
+  width: 100%;
+}
 .ui-button.icon {
   padding: 0.5em;
 }
-.ui-button-hover,
+.ui-button.hover,
 .ui-button:hover,
 .ui-button:focus {
   background: #cacfd2;
@@ -1210,25 +1214,23 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
 .ui-button:focus {
   outline: 0;
 }
-.ui-button-active,
-.ui-button:active,
-.ui-button.active {
+.ui-button.active,
+.ui-button:active {
   background: #a1a6a9;
 }
 .ui-button[disabled],
-.ui-button-disabled,
+.ui-button.disabled,
 .ui-button-disabled:hover,
 .ui-button-disabled:focus,
 .ui-button-disabled:active {
   border: none;
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   filter: alpha(opacity=40);
   -khtml-opacity: 0.40;
   -moz-opacity: 0.40;
   opacity: 0.40;
   cursor: not-allowed;
   box-shadow: none;
+  background-color: #bdc3c7;
 }
 .ui-button-hidden {
   display: none;

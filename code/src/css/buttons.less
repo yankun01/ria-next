@@ -45,11 +45,16 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
     border-radius: 2px;
 }
 
+.@{ui-class-prefix}-button.fluid {
+    display: block;
+    width: 100%;
+}
+
 .@{ui-class-prefix}-button.icon {
     padding: 0.5em;
 }
 
-.@{ui-class-prefix}-button-hover,
+.@{ui-class-prefix}-button.hover,
 .@{ui-class-prefix}-button:hover,
 .@{ui-class-prefix}-button:focus {
     background: @button-hover-background-color;
@@ -57,26 +62,24 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
 .@{ui-class-prefix}-button:focus {
     outline: 0;
 }
-.@{ui-class-prefix}-button-active,
-.@{ui-class-prefix}-button:active, 
-.@{ui-class-prefix}-button.active {
+.@{ui-class-prefix}-button.active,
+.@{ui-class-prefix}-button:active {
     background: @button-active-background-color;
 }
 
 .@{ui-class-prefix}-button[disabled],
-.@{ui-class-prefix}-button-disabled,
+.@{ui-class-prefix}-button.disabled,
 .@{ui-class-prefix}-button-disabled:hover,
 .@{ui-class-prefix}-button-disabled:focus,
 .@{ui-class-prefix}-button-disabled:active {
     border: none;
-    background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     filter: alpha(opacity=40);
     -khtml-opacity: 0.40;
     -moz-opacity: 0.40;
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;
+    background-color: @button-background-color;
 }
 
 .@{ui-class-prefix}-button-hidden {
