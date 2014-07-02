@@ -33,3 +33,10 @@ html {
     font-family: @default-font-family;
     background: @body-color;
 }
+
+button[disabled],
+html input[disabled],
+@{ui-class-prefix}-disabled {
+    cursor: not-allowed;
+    opacity: 1;
+}

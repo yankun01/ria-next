@@ -2,6 +2,7 @@
 #navigator {
   list-style: none;
   padding: 0;
+  margin-left: 10px;
 }
 #navigator li a {
     text-decoration: none;
@@ -93,4 +94,23 @@ h2 {
     overflow: auto;
     opacity: 1;
     transition: opacity .2s linear;
+}
+
+.fa-hover a {
+    color: #666;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.fa-hover a:hover {
+    background-color: #1d9d74;
+    color: #fff;
+
+}
+h3 {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eeeeee;
 }
