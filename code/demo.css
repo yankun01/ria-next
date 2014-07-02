@@ -114,3 +114,18 @@ h3 {
     margin: 40px 0 20px;
     border-bottom: 1px solid #eeeeee;
 }
+
+.ui.image {
+    width:300px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    background-color: rgba(0,0,0,.05);
+}
+
+.ui.image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
