@@ -660,12 +660,12 @@ ui-disabled {
 /*--------------------
         Inputs
 ---------------------*/
-.ui.input {
+.ui-input {
   display: inline-block;
   position: relative;
   color: rgba(0, 0, 0, 0.7);
 }
-.ui.input input {
+.ui-input input {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0em;
@@ -689,10 +689,10 @@ ui-disabled {
       Placeholder
 ---------------------*/
 /* browsers require these rules separate */
-.ui.input::-webkit-input-placeholder {
+.ui-input::-webkit-input-placeholder {
   color: #bbbbbb;
 }
-.ui.input::-moz-placeholder {
+.ui-input::-moz-placeholder {
   color: #bbbbbb;
 }
 /*******************************
@@ -701,8 +701,8 @@ ui-disabled {
 /*--------------------
         Active
 ---------------------*/
-.ui.input input:active,
-.ui.input.down input {
+.ui-input input:active,
+.ui-input.down input {
   border-color: rgba(0, 0, 0, 0.3);
   background-color: #fafafa;
 }
@@ -719,37 +719,37 @@ ui-disabled {
 /*--------------------
         Focus
 ---------------------*/
-.ui.input.focus input,
-.ui.input input:focus {
+.ui-input.focus input,
+.ui-input input:focus {
   border-color: rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.85);
 }
 /*--------------------
         Error
 ---------------------*/
-.ui.input.error input {
+.ui-input.error input {
   background-color: #fffafa;
   border-color: #e7bebe;
   color: #d95c5c;
 }
 /* Error Placeholder */
-.ui.input.error input ::-webkit-input-placeholder {
+.ui-input.error input ::-webkit-input-placeholder {
   color: #ff0000;
 }
-.ui.input.error input ::-moz-placeholder {
+.ui-input.error input ::-moz-placeholder {
   color: #ff0000;
 }
-.ui.input.error input :focus::-webkit-input-placeholder {
+.ui-input.error input :focus::-webkit-input-placeholder {
   color: #ff0000;
 }
-.ui.input.error input :focus::-moz-placeholder {
+.ui-input.error input :focus::-moz-placeholder {
   color: #ff0000;
 }
 /*--------------------
         Disabled
 ---------------------*/
-.ui.input.disabled input,
-.ui.input input[disabled] {
+.ui-input.disabled input,
+.ui-input input[disabled] {
   background-color: #eeeeee;
   border-color: rgba(0, 0, 0, 0.2);
 }
@@ -766,7 +766,7 @@ ui-disabled {
 /*--------------------
          Icon
 ---------------------*/
-.ui.icon.input > .icon {
+.ui-input.icon > .icon {
   cursor: default;
   position: absolute;
   opacity: 0.5;
@@ -786,18 +786,18 @@ ui-disabled {
   -moz-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
-.ui.icon.input > .link.icon {
+.ui-input.icon > .link.icon {
   cursor: pointer;
 }
-.ui.icon.input input {
+.ui-input.icon input {
   padding-right: 3em !important;
 }
-.ui.icon.input > .circular.icon {
+.ui-input.icon > .circular.icon {
   top: 0.35em;
   right: 0.5em;
 }
 /* Left Side */
-.ui.left.icon.input > .icon {
+.ui-input.icon.left > .icon {
   right: auto;
   left: 1px;
   border-radius: 0.3125em 0em 0em 0.3125em;
@@ -868,31 +868,31 @@ ui-disabled {
 /*--------------------
         Fluid
 ---------------------*/
-.ui.fluid.input {
+.ui-input.fluid {
   display: block;
 }
 /*--------------------
         Size
 ---------------------*/
-.ui.mini.input {
+.ui-input.mini {
   font-size: 0.8125em;
 }
-.ui.small.input {
+.ui-input.small {
   font-size: 0.875em;
 }
-.ui.input {
+.ui-input {
   font-size: 1em;
 }
-.ui.large.input {
+.ui-input.large {
   font-size: 1.125em;
 }
-.ui.big.input {
+.ui-input.big {
   font-size: 1.25em;
 }
-.ui.huge.input {
+.ui-input.huge {
   font-size: 1.375em;
 }
-.ui.massive.input {
+.ui-input.massive {
   font-size: 1.5em;
 }
 /*!
@@ -1209,14 +1209,19 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
 .ui-button.hover,
 .ui-button:hover,
 .ui-button:focus {
-  background: #cacfd2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0) !important;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1))) !important;
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)) !important;
 }
 .ui-button:focus {
   outline: 0;
 }
 .ui-button.active,
 .ui-button:active {
-  background: #a1a6a9;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
 }
 .ui-button[disabled],
 .ui-button.disabled,
@@ -1224,28 +1229,85 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
 .ui-button-disabled:focus,
 .ui-button-disabled:active {
   border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   filter: alpha(opacity=40);
   -khtml-opacity: 0.40;
   -moz-opacity: 0.40;
   opacity: 0.40;
   cursor: not-allowed;
   box-shadow: none;
-  background-color: #bdc3c7;
-}
-.ui-button-hidden {
-  display: none;
 }
 /* Firefox: Get rid of the inner focus border */
 .ui-button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-.ui-button-primary,
-.ui-button-selected,
-a.ui-button-primary,
-a.ui-button-selected {
+.ui-button.primary,
+.ui-button.selected,
+a.ui-button.primary,
+a.ui-button.selected {
   background-color: #0078e7;
   color: #fff;
+}
+.ui-button.success,
+.ui-button.error,
+.ui-button.warning,
+.ui-button.secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.ui-button.success {
+  background: #1cb841;
+  /* this is a green */
+}
+.ui-button.error {
+  background: #ca3c3c;
+  /* this is a maroon */
+}
+.ui-button.warning {
+  background: #df7514;
+  /* this is an orange */
+}
+.ui-button.secondary {
+  background: #42b8dd;
+  /* this is a light blue */
+}
+/*--------------------
+        Size
+---------------------*/
+.ui-button.mini {
+  font-size: 0.8125em;
+}
+.ui-button.small {
+  font-size: 0.875em;
+}
+.ui-button.large {
+  font-size: 1.125em;
+}
+.ui-button.big {
+  font-size: 1.25em;
+}
+.ui-button.huge {
+  font-size: 1.375em;
+}
+.ui-button.massive {
+  font-size: 1.5em;
+}
+.ui-button-group .ui-button {
+  float: left;
+}
+.ui-button-group > .ui-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ui-button-group > .ui-button:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ui-button-group > .ui-button:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /*!
 @{ui-class-prefix} v0.5.0

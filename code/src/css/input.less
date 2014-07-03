@@ -19,12 +19,12 @@
         Inputs
 ---------------------*/
 
-.ui.input {
+.@{ui-class-prefix}-input {
   display: inline-block;
   position: relative;
   color: rgba(0, 0, 0, 0.7);
 }
-.ui.input input {
+.@{ui-class-prefix}-input input {
   width: 100%;
   font-family: @default-font-family;
 
@@ -66,10 +66,10 @@
 ---------------------*/
 
 /* browsers require these rules separate */
-.ui.input::-webkit-input-placeholder {
+.@{ui-class-prefix}-input::-webkit-input-placeholder {
   color: @input-placeholder-color;
 }
-.ui.input::-moz-placeholder {
+.@{ui-class-prefix}-input::-moz-placeholder {
   color: @input-placeholder-color;
 }
 
@@ -82,8 +82,8 @@
         Active
 ---------------------*/
 
-.ui.input input:active,
-.ui.input.down input {
+.@{ui-class-prefix}-input input:active,
+.@{ui-class-prefix}-input.down input {
   border-color: @input-active-border-color;
   background-color: @input-active-background-color;
 }
@@ -104,8 +104,8 @@
         Focus
 ---------------------*/
 
-.ui.input.focus input,
-.ui.input input:focus  {
+.@{ui-class-prefix}-input.focus input,
+.@{ui-class-prefix}-input input:focus  {
   border-color: @input-focus-border-color;
   color: @input-focus-background-color;
 }
@@ -114,23 +114,23 @@
         Error
 ---------------------*/
 
-.ui.input.error input {
+.@{ui-class-prefix}-input.error input {
   background-color: @input-error-background-color;
   border-color: @input-error-border-color;
   color: @input-error-text-color;
 }
 
 /* Error Placeholder */
-.ui.input.error input ::-webkit-input-placeholder {
+.@{ui-class-prefix}-input.error input ::-webkit-input-placeholder {
   color: @input-error-placeholder-color;
 }
-.ui.input.error input ::-moz-placeholder {
+.@{ui-class-prefix}-input.error input ::-moz-placeholder {
   color: @input-error-placeholder-color;
 }
-.ui.input.error input :focus::-webkit-input-placeholder {
+.@{ui-class-prefix}-input.error input :focus::-webkit-input-placeholder {
   color: @input-error-placeholder-color;
 }
-.ui.input.error input :focus::-moz-placeholder {
+.@{ui-class-prefix}-input.error input :focus::-moz-placeholder {
   color: @input-error-placeholder-color;
 }
 
@@ -138,8 +138,8 @@
         Disabled
 ---------------------*/
 
-.ui.input.disabled input,
-.ui.input input[disabled] {
+.@{ui-class-prefix}-input.disabled input,
+.@{ui-class-prefix}-input input[disabled] {
   background-color: @input-disabled-background-color;
   border-color: @input-disabled-border-color;
 }
@@ -163,7 +163,7 @@
          Icon
 ---------------------*/
 
-.ui.icon.input > .icon {
+.@{ui-class-prefix}-input.icon > .icon {
   cursor: default;
   position: absolute;
   opacity: 0.5;
@@ -188,19 +188,19 @@
   -moz-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
-.ui.icon.input > .link.icon {
+.@{ui-class-prefix}-input.icon > .link.icon {
   cursor: pointer;
 }
-.ui.icon.input input {
+.@{ui-class-prefix}-input.icon input {
   padding-right: 3em !important;
 }
-.ui.icon.input > .circular.icon {
+.@{ui-class-prefix}-input.icon > .circular.icon {
   top: 0.35em;
   right: 0.5em;
 }
 
 /* Left Side */
-.ui.left.icon.input > .icon {
+.@{ui-class-prefix}-input.icon.left > .icon {
   right: auto;
   left: 1px;
   border-radius: 0.3125em 0em 0em 0.3125em;
@@ -283,7 +283,7 @@
         Fluid
 ---------------------*/
 
-.ui.fluid.input {
+.@{ui-class-prefix}-input.fluid {
   display: block;
 }
 
@@ -292,24 +292,24 @@
         Size
 ---------------------*/
 
-.ui.mini.input {
+.@{ui-class-prefix}-input.mini {
   font-size: 0.8125em;
 }
-.ui.small.input {
+.@{ui-class-prefix}-input.small {
   font-size: 0.875em;
 }
-.ui.input {
+.@{ui-class-prefix}-input {
   font-size: 1em;
 }
-.ui.large.input {
+.@{ui-class-prefix}-input.large {
   font-size: 1.125em;
 }
-.ui.big.input {
+.@{ui-class-prefix}-input.big {
   font-size: 1.25em;
 }
-.ui.huge.input {
+.@{ui-class-prefix}-input.huge {
   font-size: 1.375em;
 }
-.ui.massive.input {
+.@{ui-class-prefix}-input.massive {
   font-size: 1.5em;
 }

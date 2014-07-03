@@ -54,17 +54,26 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
     padding: 0.5em;
 }
 
+.hover-mixin() {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+
 .@{ui-class-prefix}-button.hover,
 .@{ui-class-prefix}-button:hover,
 .@{ui-class-prefix}-button:focus {
-    background: @button-hover-background-color;
+    .hover-mixin() !important;
 }
 .@{ui-class-prefix}-button:focus {
     outline: 0;
 }
 .@{ui-class-prefix}-button.active,
 .@{ui-class-prefix}-button:active {
-    background: @button-active-background-color;
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
 }
 
 .@{ui-class-prefix}-button[disabled],
@@ -73,17 +82,14 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
 .@{ui-class-prefix}-button-disabled:focus,
 .@{ui-class-prefix}-button-disabled:active {
     border: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     filter: alpha(opacity=40);
     -khtml-opacity: 0.40;
     -moz-opacity: 0.40;
     opacity: 0.40;
     cursor: not-allowed;
     box-shadow: none;
-    background-color: @button-background-color;
-}
-
-.@{ui-class-prefix}-button-hidden {
-    display: none;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -92,10 +98,79 @@ https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
     border: 0;
 }
 
-.@{ui-class-prefix}-button-primary,
-.@{ui-class-prefix}-button-selected,
-a.@{ui-class-prefix}-button-primary,
-a.@{ui-class-prefix}-button-selected {
+.@{ui-class-prefix}-button.primary,
+.@{ui-class-prefix}-button.selected,
+a.@{ui-class-prefix}-button.primary,
+a.@{ui-class-prefix}-button.selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
 }
+
+.@{ui-class-prefix}-button.success,
+.@{ui-class-prefix}-button.error,
+.@{ui-class-prefix}-button.warning,
+.@{ui-class-prefix}-button.secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.@{ui-class-prefix}-button.success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.@{ui-class-prefix}-button.error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.@{ui-class-prefix}-button.warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.@{ui-class-prefix}-button.secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+/*--------------------
+        Size
+---------------------*/
+.@{ui-class-prefix}-button.mini {
+  font-size: 0.8125em;
+}
+.@{ui-class-prefix}-button.small {
+  font-size: 0.875em;
+}
+.@{ui-class-prefix}-button.large {
+  font-size: 1.125em;
+}
+.@{ui-class-prefix}-button.big {
+  font-size: 1.25em;
+}
+.@{ui-class-prefix}-button.huge {
+  font-size: 1.375em;
+}
+.@{ui-class-prefix}-button.massive {
+  font-size: 1.5em;
+}
+
+.@{ui-class-prefix}-button-group {
+    .@{ui-class-prefix}-button {
+        float: left;
+    }
+}
+
+.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:first-child {
+  &:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+.@{ui-class-prefix}-button-group > .@{ui-class-prefix}-button:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+
