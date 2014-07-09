@@ -1,296 +1,103 @@
-/*!
-@{ui-class-prefix} v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
-*/
-/*csslint adjoining-classes:false, outline-none:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
+@menu-background-color: #1a1a1a;
+@menu-border-radius: 2px;
 
-.@{ui-class-prefix}-menu ul {
-    position: absolute;
-    visibility: hidden;
-}
+@menu-sub-border-color: 1px solid rgba(0, 0, 0, 0.1);
+@menu-sub-background-color: #fff;
+@menu-sub-text-color: #555555;
 
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-open {
-    visibility: visible;
-    z-index: 2;
-    width: 100%;
-}
-
-.@{ui-class-prefix}-menu ul {
-    left: -10000px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    top: -10000px;
-    z-index: 1;
-}
-
-.@{ui-class-prefix}-menu > ul { position: relative; }
-
-.@{ui-class-prefix}-menu-open > ul {
-    left: 0;
-    top: 0;
-    visibility: visible;
-}
-
-.@{ui-class-prefix}-menu-open > ul:focus {
-    outline: 0;
-}
-
-.@{ui-class-prefix}-menu li { position: relative; }
-
-.@{ui-class-prefix}-menu a,
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-heading {
-    display: block;
-    color: inherit;
-    line-height: 1.5em;
-    padding: 5px 20px;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-horizontal > .@{ui-class-prefix}-menu-heading {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin: 0;
-    vertical-align: middle;
-}
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-horizontal > ul {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
-}
-
-.@{ui-class-prefix}-menu li a { padding: 5px 20px; }
-
-.@{ui-class-prefix}-menu-can-have-children > .@{ui-class-prefix}-menu-label:after {
-    content: '\25B8';
-    float: right;
-    /* These specific fonts have the Unicode char we need. */
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-    margin-right: -20px;
-    margin-top: -1px;
-}
-
-.@{ui-class-prefix}-menu-can-have-children > .@{ui-class-prefix}-menu-label {
-    padding-right: 30px;
-}
-
-.@{ui-class-prefix}-menu-separator {
-    background-color: #dfdfdf;
-    display: block;
-    height: 1px;
-    font-size: 0;
-    margin: 7px 2px;
-    overflow: hidden;
-}
-
-.@{ui-class-prefix}-menu-hidden {
-    display: none;
-}
-
-/* FIXED MENU */
-.@{ui-class-prefix}-menu-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-
-/* HORIZONTAL MENU CODE */
-
-/* Initial menus should be inline-block so that they are horizontal */
-.@{ui-class-prefix}-menu-horizontal li {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
-}
-
-/* Submenus should still be display: block; */
-.@{ui-class-prefix}-menu-horizontal li li {
-    display: block;
-}
-
-/* Content after should be down arrow */
-.@{ui-class-prefix}-menu-horizontal > .@{ui-class-prefix}-menu-children > .@{ui-class-prefix}-menu-can-have-children > .@{ui-class-prefix}-menu-label:after {
-    content: "\25BE";
-}
-/*Add extra padding to elements that have the arrow so that the hover looks nice */
-.@{ui-class-prefix}-menu-horizontal > .@{ui-class-prefix}-menu-children > .@{ui-class-prefix}-menu-can-have-children > .@{ui-class-prefix}-menu-label {
-    padding-right: 30px;
-}
-
-/* Adjusting separator for vertical menus */
-.@{ui-class-prefix}-menu-horizontal li.@{ui-class-prefix}-menu-separator {
-	height: 50%;
-	width: 1px;
-	margin: 0 7px;
-}
-
-/* Submenus should be horizontal separator again */
-.@{ui-class-prefix}-menu-horizontal li li.@{ui-class-prefix}-menu-separator {
-	height: 1px;
-	width: auto;
-	margin: 7px 2px;
-}
-
-
-/*csslint adjoining-classes:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-/* MAIN MENU STYLING */
-
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-open,
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-horizontal li .@{ui-class-prefix}-menu-children {
-    background: #fff; /* Old browsers */
-    border: 1px solid #b7b7b7;
-}
-
-/* remove borders for horizontal menus */
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-horizontal,
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-horizontal .@{ui-class-prefix}-menu-heading {
-    border: none;
-}
-
-
-/* LINK STYLES */
-
-.@{ui-class-prefix}-menu a {
-    border: 1px solid transparent;
-    border-left: none;
-    border-right: none;
-
-}
-
-.@{ui-class-prefix}-menu a,
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-can-have-children > li:after {
-    color: #777;
-}
-
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-can-have-children > li:hover:after {
-    color: #fff;
-}
-
-/* Focus style for a dropdown menu-item when the parent has been opened */
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-open {
-    background: #dedede;
-}
-
-
-.@{ui-class-prefix}-menu li a:hover,
-.@{ui-class-prefix}-menu li a:focus {
-    background: #eee;
-}
-
-/* DISABLED STATES */
-.@{ui-class-prefix}-menu li.@{ui-class-prefix}-menu-disabled a:hover,
-.@{ui-class-prefix}-menu li.@{ui-class-prefix}-menu-disabled a:focus {
-    background: #fff;
-    color: #bfbfbf;
-}
-
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-disabled > a {
-    background-image: none;
-    border-color: transparent;
-    cursor: default;
-}
-
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-disabled > a,
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-can-have-children.@{ui-class-prefix}-menu-disabled > a:after {
-    color: #bfbfbf;
-}
-
-/* HEADINGS */
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-heading {
-    color: #565d64;
-    text-transform: uppercase;
-    font-size: 90%;
-    margin-top: 0.5em;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #dfdfdf;
-}
-
-/* ACTIVE MENU ITEM */
-.@{ui-class-prefix}-menu .@{ui-class-prefix}-menu-selected a {
-    color: #000;
-}
-
-/* FIXED MENU */
-.@{ui-class-prefix}-menu.@{ui-class-prefix}-menu-open.@{ui-class-prefix}-menu-fixed {
-    border: none;
-    border-bottom: 1px solid #b7b7b7;
-}
-
-/*csslint box-model:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-
-.@{ui-class-prefix}-paginator {
-
-    /* `@{ui-class-prefix}-g` Grid styles */
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
-
-    /* `@{ui-class-prefix}-paginator` Specific styles */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.opera-only :-o-prefocus,
-.@{ui-class-prefix}-paginator {
-    word-spacing: -0.43em;
-}
-
-/* `@{ui-class-prefix}-u` Grid styles */
-.@{ui-class-prefix}-paginator li {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
-
-
-.@{ui-class-prefix}-paginator .@{ui-class-prefix}-button {
-    border-radius: 0;
-    padding: 0.8em 1.4em;
-    vertical-align: top;
-    height: 1.1em;
-}
-.@{ui-class-prefix}-paginator .@{ui-class-prefix}-button:focus,
-.@{ui-class-prefix}-paginator .@{ui-class-prefix}-button:active {
-    outline-style: none;
-}
-.@{ui-class-prefix}-paginator .prev,
-.@{ui-class-prefix}-paginator .next {
-    color: #C0C1C3;
-    text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
-}
-.@{ui-class-prefix}-paginator .prev {
-    border-radius: 2px 0 0 2px;
-}
-.@{ui-class-prefix}-paginator .next {
-    border-radius: 0 2px 2px 0;
-}
-
-@media (max-width: 480px) {
-    .@{ui-class-prefix}-menu-horizontal {
-        width: 100%;
+.@{ui-class-prefix}-menu {
+    overflow: visible;
+    position: relative;
+    background: @menu-background-color;
+    border-radius: @menu-border-radius;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
+    li {
+        position: relative;
+        margin: 0;
+        ul.submenu {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            background: @menu-sub-background-color;
+            border: @menu-sub-border-color;
+            li {
+                font-size: .875em;
+                a {
+                    padding: 0.5em 1em;
+                    display: block;
+                    float: none;
+                    color: @menu-sub-text-color;
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                background: #404040;
+            }
+        }
+    }
+    li:hover > ul.submenu {
+      display: block;
+    }
+    li.disabled {
+        a {
+            color: #666666;
+            text-shadow: black 0 -1px 0;
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    li.active {
+        background: #333333;
+    }
+}
 
-    .@{ui-class-prefix}-menu-children li {
-        display: block;
-        border-bottom: 1px solid black;
+.@{ui-class-prefix}-menu.horizontal {
+    .clearfix();
+    li {
+        float: left;
+        a {
+            padding: 0.5em 1em;
+            display: block;
+            line-height: 1.7;
+        }
+        ul.submenu {
+            min-width: 100%;
+            left: 0;
+            z-index: 1000;
+            top: auto;
+            left: auto;
+            li {
+                float: none;
+                .flyout {
+                    position: absolute;
+                    top: 0;
+                    &.left {
+                        right: 100%;
+                    }
+                    &.right {
+                        left: 100%;
+                    }
+                }
+            }
+        }
+    }
+    > ul li:first-child,
+    > ul li:first-child a{
+        .border-left-radius(@menu-border-radius);
+    }
+    > ul li:last-child,
+    > ul li:last-child a {
+        .border-right-radius(@menu-border-radius);
     }
 }

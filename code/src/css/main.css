@@ -1309,261 +1309,105 @@ a.ui-button.selected {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-/*!
-@{ui-class-prefix} v0.5.0
-Copyright 2014 Yahoo! Inc. All rights reserved.
-Licensed under the BSD License.
-https://github.com/yui/@{ui-class-prefix}/blob/master/LICENSE.md
-*/
-/*csslint adjoining-classes:false, outline-none:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-.ui-menu ul {
-  position: absolute;
-  visibility: hidden;
-}
-.ui-menu.ui-menu-open {
-  visibility: visible;
-  z-index: 2;
-  width: 100%;
-}
-.ui-menu ul {
-  left: -10000px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  top: -10000px;
-  z-index: 1;
-}
-.ui-menu > ul {
+.ui-menu {
+  overflow: visible;
   position: relative;
+  background: #1a1a1a;
+  border-radius: 2px;
 }
-.ui-menu-open > ul {
-  left: 0;
-  top: 0;
-  visibility: visible;
-}
-.ui-menu-open > ul:focus {
-  outline: 0;
+.ui-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 .ui-menu li {
   position: relative;
-}
-.ui-menu a,
-.ui-menu .ui-menu-heading {
-  display: block;
-  color: inherit;
-  line-height: 1.5em;
-  padding: 5px 20px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.ui-menu.ui-menu-horizontal > .ui-menu-heading {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
   margin: 0;
-  vertical-align: middle;
 }
-.ui-menu.ui-menu-horizontal > ul {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  vertical-align: middle;
+.ui-menu li ul.submenu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ui-menu li ul.submenu li {
+  font-size: .875em;
+}
+.ui-menu li ul.submenu li a {
+  padding: 0.5em 1em;
+  display: block;
+  float: none;
+  color: #555555;
+}
+.ui-menu li ul.submenu li a:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 .ui-menu li a {
-  padding: 5px 20px;
+  color: white;
+  text-decoration: none;
 }
-.ui-menu-can-have-children > .ui-menu-label:after {
-  content: '\25B8';
-  float: right;
-  /* These specific fonts have the Unicode char we need. */
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-  margin-right: -20px;
-  margin-top: -1px;
+.ui-menu li a:hover {
+  background: #404040;
 }
-.ui-menu-can-have-children > .ui-menu-label {
-  padding-right: 30px;
-}
-.ui-menu-separator {
-  background-color: #dfdfdf;
+.ui-menu li:hover > ul.submenu {
   display: block;
-  height: 1px;
-  font-size: 0;
-  margin: 7px 2px;
-  overflow: hidden;
 }
-.ui-menu-hidden {
-  display: none;
+.ui-menu li.disabled a {
+  color: #666666;
+  text-shadow: #000000 0 -1px 0;
 }
-/* FIXED MENU */
-.ui-menu-fixed {
-  position: fixed;
-  top: 0;
+.ui-menu li.disabled a:hover {
+  background: none;
+}
+.ui-menu li.active {
+  background: #333333;
+}
+.ui-menu.horizontal:before,
+.ui-menu.horizontal:after {
+  content: " ";
+  display: table;
+}
+.ui-menu.horizontal:after {
+  clear: both;
+}
+.ui-menu.horizontal li {
+  float: left;
+}
+.ui-menu.horizontal li a {
+  padding: 0.5em 1em;
+  display: block;
+  line-height: 1.7;
+}
+.ui-menu.horizontal li ul.submenu {
+  min-width: 100%;
   left: 0;
-  width: 100%;
+  z-index: 1000;
+  top: auto;
+  left: auto;
 }
-/* HORIZONTAL MENU CODE */
-/* Initial menus should be inline-block so that they are horizontal */
-.ui-menu-horizontal li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  vertical-align: middle;
+.ui-menu.horizontal li ul.submenu li {
+  float: none;
 }
-/* Submenus should still be display: block; */
-.ui-menu-horizontal li li {
-  display: block;
+.ui-menu.horizontal li ul.submenu li .flyout {
+  position: absolute;
+  top: 0;
 }
-/* Content after should be down arrow */
-.ui-menu-horizontal > .ui-menu-children > .ui-menu-can-have-children > .ui-menu-label:after {
-  content: "\25BE";
+.ui-menu.horizontal li ul.submenu li .flyout.left {
+  right: 100%;
 }
-/*Add extra padding to elements that have the arrow so that the hover looks nice */
-.ui-menu-horizontal > .ui-menu-children > .ui-menu-can-have-children > .ui-menu-label {
-  padding-right: 30px;
+.ui-menu.horizontal li ul.submenu li .flyout.right {
+  left: 100%;
 }
-/* Adjusting separator for vertical menus */
-.ui-menu-horizontal li.ui-menu-separator {
-  height: 50%;
-  width: 1px;
-  margin: 0 7px;
+.ui-menu.horizontal > ul li:first-child,
+.ui-menu.horizontal > ul li:first-child a {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
 }
-/* Submenus should be horizontal separator again */
-.ui-menu-horizontal li li.ui-menu-separator {
-  height: 1px;
-  width: auto;
-  margin: 7px 2px;
-}
-/*csslint adjoining-classes:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-/* MAIN MENU STYLING */
-.ui-menu.ui-menu-open,
-.ui-menu.ui-menu-horizontal li .ui-menu-children {
-  background: #fff;
-  /* Old browsers */
-  border: 1px solid #b7b7b7;
-}
-/* remove borders for horizontal menus */
-.ui-menu.ui-menu-horizontal,
-.ui-menu.ui-menu-horizontal .ui-menu-heading {
-  border: none;
-}
-/* LINK STYLES */
-.ui-menu a {
-  border: 1px solid transparent;
-  border-left: none;
-  border-right: none;
-}
-.ui-menu a,
-.ui-menu .ui-menu-can-have-children > li:after {
-  color: #777;
-}
-.ui-menu .ui-menu-can-have-children > li:hover:after {
-  color: #fff;
-}
-/* Focus style for a dropdown menu-item when the parent has been opened */
-.ui-menu .ui-menu-open {
-  background: #dedede;
-}
-.ui-menu li a:hover,
-.ui-menu li a:focus {
-  background: #eee;
-}
-/* DISABLED STATES */
-.ui-menu li.ui-menu-disabled a:hover,
-.ui-menu li.ui-menu-disabled a:focus {
-  background: #fff;
-  color: #bfbfbf;
-}
-.ui-menu .ui-menu-disabled > a {
-  background-image: none;
-  border-color: transparent;
-  cursor: default;
-}
-.ui-menu .ui-menu-disabled > a,
-.ui-menu .ui-menu-can-have-children.ui-menu-disabled > a:after {
-  color: #bfbfbf;
-}
-/* HEADINGS */
-.ui-menu .ui-menu-heading {
-  color: #565d64;
-  text-transform: uppercase;
-  font-size: 90%;
-  margin-top: 0.5em;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #dfdfdf;
-}
-/* ACTIVE MENU ITEM */
-.ui-menu .ui-menu-selected a {
-  color: #000;
-}
-/* FIXED MENU */
-.ui-menu.ui-menu-open.ui-menu-fixed {
-  border: none;
-  border-bottom: 1px solid #b7b7b7;
-}
-/*csslint box-model:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-.ui-paginator {
-  /* `@{ui-class-prefix}-g` Grid styles */
-  letter-spacing: -0.31em;
-  /* Webkit: collapse white-space between units */
-  *letter-spacing: normal;
-  /* reset IE < 8 */
-  *word-spacing: -0.43em;
-  /* IE < 8: collapse white-space between units */
-  text-rendering: optimizespeed;
-  /* Webkit: fixes text-rendering: optimizeLegibility */
-  /* `@{ui-class-prefix}-paginator` Specific styles */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.opera-only :-o-prefocus,
-.ui-paginator {
-  word-spacing: -0.43em;
-}
-/* `@{ui-class-prefix}-u` Grid styles */
-.ui-paginator li {
-  display: inline-block;
-  *display: inline;
-  /* IE < 8: fake inline-block */
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto;
-}
-.ui-paginator .ui-button {
-  border-radius: 0;
-  padding: 0.8em 1.4em;
-  vertical-align: top;
-  height: 1.1em;
-}
-.ui-paginator .ui-button:focus,
-.ui-paginator .ui-button:active {
-  outline-style: none;
-}
-.ui-paginator .prev,
-.ui-paginator .next {
-  color: #C0C1C3;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45);
-}
-.ui-paginator .prev {
-  border-radius: 2px 0 0 2px;
-}
-.ui-paginator .next {
-  border-radius: 0 2px 2px 0;
-}
-@media (max-width: 480px) {
-  .ui-menu-horizontal {
-    width: 100%;
-  }
-  .ui-menu-children li {
-    display: block;
-    border-bottom: 1px solid black;
-  }
+.ui-menu.horizontal > ul li:last-child,
+.ui-menu.horizontal > ul li:last-child a {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 /*
  * # Semantic - Label
